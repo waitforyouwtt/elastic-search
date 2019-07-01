@@ -21,4 +21,6 @@ public interface AdminService {
      * @return
      */
     Admin findAdmin(Admin admin,Integer queryType) ;
+
+    void deleteById(String id);
 }

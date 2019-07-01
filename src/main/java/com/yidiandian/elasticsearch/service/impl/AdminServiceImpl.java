@@ -57,6 +57,12 @@ public class AdminServiceImpl implements AdminService {
         }
         return result;
     }
+
+    @Override
+    public void deleteById(String id) {
+         adminMapper.deleteById(id);
+    }
+
     /**
      * 根据名字查询
      * @param admin

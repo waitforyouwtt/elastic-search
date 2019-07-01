@@ -32,6 +32,8 @@ public class Admin {
 
     private String address;
 
+    private String gender;
+
     public Admin(String userName, String nickName, String password, String mobile, String address) {
         this.userName = userName;
         this.nickName = nickName;
