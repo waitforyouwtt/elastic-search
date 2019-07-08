@@ -1,6 +1,6 @@
 package com.yidiandian.elasticsearch.controller;
 
-import com.yidiandian.elasticsearch.config.JwtUtil;
+/*import com.yidiandian.elasticsearch.config.JwtUtil;*/
 import com.yidiandian.elasticsearch.entity.Admin;
 import com.yidiandian.elasticsearch.entity.Article;
 import com.yidiandian.elasticsearch.service.AdminService;
@@ -27,15 +27,15 @@ public class AdminController {
 
     @Autowired
     AdminService adminService;
-    @Autowired
-    JwtUtil jwtUtil;
+/*    @Autowired
+    JwtUtil jwtUtil;*/
 
     @PostMapping("/login")
     public Map<String,String> login(Admin params){
         Admin result = adminService.findAdmin(params,2);
-        String token = jwtUtil.createJWT(result.getUserId(), result.getNickName(), "admin");
+      //  String token = jwtUtil.createJWT(result.getUserId(), result.getNickName(), "admin");
         Map<String,String> map = new HashMap(16);
-        map.put("token",token);
+     //   map.put("token",token);
         map.put("nickName",result.getNickName());
         return map;
     }
@@ -49,13 +49,13 @@ public class AdminController {
             throw new MyException("权限不足");
         }
         String token = authHeader.substring(7);
-        Claims claims = jwtUtil.parseJWT(token);
+       /* Claims claims = jwtUtil.parseJWT(token);
         if (claims == null){
             throw new MyException("权限不足");
         }
         if (!"admin".equals(claims.get("roles"))){
             throw new MyException("权限不足");
-        }
+        }*/
         adminService.deleteById(id);
     }
 

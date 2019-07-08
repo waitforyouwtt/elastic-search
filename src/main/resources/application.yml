@@ -39,11 +39,11 @@ spring:
         prefetch: 5
 
 
-
 server:
   port: 8082
+
 #1000秒*60*60=1小时
 jwt:
   config:
     key: yidiandian
-    ttl: 1000*60*60
+    ttl: 3600

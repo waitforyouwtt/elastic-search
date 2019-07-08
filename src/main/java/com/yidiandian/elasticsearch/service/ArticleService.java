@@ -1,7 +1,6 @@
 package com.yidiandian.elasticsearch.service;
 
 import com.yidiandian.elasticsearch.entity.Article;
-
 import java.util.List;
 
 /**

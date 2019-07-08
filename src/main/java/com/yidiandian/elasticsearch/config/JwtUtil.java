@@ -14,11 +14,11 @@ import java.util.Date;
  * @Date: 2019/6/28 9:46
  * @Email: 15290810931@163.com
  */
-@ConfigurationProperties("jwt.config")
+/*@ConfigurationProperties("jwt.config")
 public class JwtUtil {
-    private String key;
+    private String key;*/
     //一个小时
-    private long ttl ;
+/*    private long ttl ;
 
     public String getKey() {
         return key;
@@ -34,7 +34,7 @@ public class JwtUtil {
 
     public void setTtl(long ttl) {
         this.ttl = ttl;
-    }
+    }*/
     /**
      * 生成JWT
      * @param id
@@ -42,7 +42,7 @@ public class JwtUtil {
      * @param roles
      * @return
      */
-    public String createJWT(String id,String subject,String roles){
+  /*  public String createJWT(String id,String subject,String roles){
         long nowMillis = System.currentTimeMillis();
         Date now = new Date(nowMillis);
         JwtBuilder builder = Jwts.builder().setId(id)
@@ -52,14 +52,14 @@ public class JwtUtil {
             builder.setExpiration(new Date(nowMillis + ttl));
         }
         return builder.compact();
-    }
+    }*/
 
     /**
      * 解析jwt
      * @param jwtStr
      * @return
      */
-    public Claims parseJWT(String jwtStr){
+  /*  public Claims parseJWT(String jwtStr){
         return Jwts.parser().setSigningKey(key).parseClaimsJws(jwtStr)
                 .getBody();
     }
@@ -67,7 +67,5 @@ public class JwtUtil {
     @Bean
     public JwtUtil jwtUtil(){
         return new JwtUtil();
-    }
-
-
-}
+    }*/
+/*}*/

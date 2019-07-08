@@ -1,7 +1,5 @@
 package com.yidiandian.elasticsearch.service.impl;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.yidiandian.elasticsearch.entity.Article;
 import com.yidiandian.elasticsearch.mapper.ArticleMapper;
 import com.yidiandian.elasticsearch.service.ArticleService;
