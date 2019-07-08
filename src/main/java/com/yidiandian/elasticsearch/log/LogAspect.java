@@ -1,4 +1,3 @@
-/*
 package com.yidiandian.elasticsearch.log;
 
 import com.alibaba.fastjson.JSONObject;
@@ -15,13 +14,11 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 
-*/
 /**
  * @Author: 凤凰[小哥哥]
  * @Date: 2019/7/8 15:34
  * @Email: 15290810931@163.com
- *//*
-
+ */
 @Aspect
 @Order(100)
 @Component
@@ -34,9 +31,7 @@ public class LogAspect {
     public static final String STIRNG_END = "\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
 
     @Pointcut("execution(* com.yidiandian..*(..))")
- */
-/*  @Pointcut("@annotation(com.yidiandian.elasticsearch.log.Log)")*//*
-
+ /*  @Pointcut("@annotation(com.yidiandian.elasticsearch.log.Log)")*/
     public void serviceLog(){
 
     }
@@ -88,4 +83,3 @@ public class LogAspect {
         return null;
     }
 }
-*/
